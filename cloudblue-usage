@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+# ******************************************************************************
+# Copyright (c) 2020-2023, Virtuozzo International GmbH.
+# This source code is distributed under MIT software license.
+# ******************************************************************************
+
+import sys
+
+import cloudblue_connector.runners as runners
+import os
+
+if __name__ == '__main__':
+    os.environ['CURL_CA_BUNDLE'] = ""
+    rv = runners.process_usage()
+    print(rv)
